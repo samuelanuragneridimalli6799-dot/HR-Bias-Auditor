@@ -12,7 +12,7 @@ jobs:
           python-version: "3.11"
       - run: pip install playwright && python -m playwright install --with-deps chromium
       - run: |
-                    python - <<'EOF'
+          python - <<'EOF'
           from playwright.sync_api import sync_playwright
           URL = "https://samuel-hr-bias-auditor.streamlit.app/"
           with sync_playwright() as p:
